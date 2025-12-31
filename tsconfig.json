@@ -1,0 +1,19 @@
+{
+	"files": [],
+	"references": [
+		{ "path": "./tsconfig.app.json" },
+		{ "path": "./tsconfig.node.json" }
+	],
+	"compilerOptions": {
+		"baseUrl": "./", // This sets the root directory
+		"paths": {
+			"@/*": ["src/*"]
+		},
+		"jsx": "react-jsx",
+		"moduleResolution": "Bundler",
+		"module": "ESNext",
+		"target": "ES2022",
+		"skipLibCheck": true,
+		"strictNullChecks": true
+	}
+}

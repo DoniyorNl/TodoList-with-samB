@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		/* ===== LIGHT MODE ===== */
+		--background: 210 20% 98%;
+		--foreground: 222 25% 12%;
+
+		--card: 0 0% 100%;
+		--card-foreground: 222 25% 12%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 222 25% 12%;
+
+		/* Primary – calm blue */
+		--primary: 215 85% 55%;
+		--primary-foreground: 0 0% 100%;
+
+		/* Secondary – neutral gray */
+		--secondary: 220 14% 92%;
+		--secondary-foreground: 222 25% 18%;
+
+		--muted: 220 14% 94%;
+		--muted-foreground: 220 10% 45%;
+
+		--accent: 215 85% 55%;
+		--accent-foreground: 0 0% 100%;
+
+		--destructive: 0 72% 52%;
+		--destructive-foreground: 0 0% 100%;
+
+		--border: 220 14% 90%;
+		--input: 220 14% 90%;
+		--ring: 215 85% 55%;
+
+		--radius: 0.75rem;
+	}
+
+	.dark {
+		/* ===== DARK MODE ===== */
+		--background: 222 40% 6%;
+		--foreground: 210 30% 96%;
+
+		--card: 222 35% 9%;
+		--card-foreground: 210 30% 96%;
+
+		--popover: 222 35% 10%;
+		--popover-foreground: 210 30% 96%;
+
+		/* Primary – steel blue */
+		--primary: 220 90% 60%;
+		--primary-foreground: 200 40% 6%;
+
+		/* Secondary – dark slate */
+		--secondary: 222 20% 18%;
+		--secondary-foreground: 210 30% 96%;
+
+		--muted: 222 20% 16%;
+		--muted-foreground: 215 15% 65%;
+
+		--accent: 214 90% 60%;
+		--accent-foreground: 222 40% 6%;
+
+		--destructive: 0 65% 45%;
+		--destructive-foreground: 0 0% 100%;
+
+		--border: 222 20% 18%;
+		--input: 222 20% 18%;
+		--ring: 214 90% 60%;
+	}
+
+	* {
+		@apply border-border;
+	}
+
+	body {
+		@apply bg-background text-foreground min-h-screen transition-colors;
+	}
+
+	.dark body {
+		@apply bg-background;
+	}
+}
+
+@layer utilities {
+	/* Glow olib tashlandi – professional look */
+	.glow-teal,
+	.glow-emerald,
+	.glow-purple {
+		box-shadow: none;
+	}
+
+	.gradient-text {
+		@apply text-foreground;
+	}
+
+	.gradient-btn {
+		@apply bg-primary hover:bg-primary/90 transition-colors;
+	}
+
+	.card-hover {
+		@apply transition-colors;
+	}
+}
