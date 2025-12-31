@@ -4,7 +4,7 @@ Modern time tracking and task management application with real-time statistics.
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![Firebase](https://img.shields.io/badge/Firebase-039BE5?logo=Firebase&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 
-**[🇺🇿 O'zbek tilida](#ozbekcha)**
+**[🇺� English](#english)**
 
 ## ✨ Features
 
