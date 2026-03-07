@@ -3,6 +3,7 @@ import { useUserState } from '@/stores/user.store'
 import { Link } from 'react-router-dom'
 import { useTheme } from '../providers/theme-provider'
 import { Button } from '../ui/button'
+import RestMenu from './restMenu'
 import { ThemeToggle } from './themeToggle'
 import UserBox from './userBox'
 
@@ -22,16 +23,21 @@ export default function Navbar() {
 				</Link>
 				<div className='flex items-center gap-3'>
 					{navLinks.map(link => (
-						<a key={link.path} href={link.path} className='font-medium hover:underline'>
+						<Link
+							key={link.path}
+							to={link.path}
+							className='font-medium hover:underline'
+						>
 							{link.label}
-						</a>
+						</Link>
 					))}
+					<RestMenu />
 					<ThemeToggle />
 					{user ? (
 						<UserBox />
 					) : (
 						<Link to={'/'}>
-							<Button variant={'secondary'} className='bg-gray-300'>
+							<Button variant='secondary'>
 								Join free
 							</Button>
 						</Link>

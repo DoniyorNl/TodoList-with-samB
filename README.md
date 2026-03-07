@@ -24,8 +24,8 @@ Modern time tracking and task management application with real-time statistics.
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/DoniyorNl/plan-with-me.git
-cd plan-with-me
+git clone https://github.com/DoniyorNl/TodoList-with-samB.git
+cd TodoList-with-samB
 npm install
 npm run dev
 ```
@@ -68,8 +68,8 @@ GitHub: [@DoniyorNl](https://github.com/DoniyorNl) • LinkedIn: [Doniyor Nasrid
 ### 🚀 Ishga tushirish
 
 ```bash
-git clone https://github.com/DoniyorNl/plan-with-me.git
-cd plan-with-me
+git clone https://github.com/DoniyorNl/TodoList-with-samB.git
+cd TodoList-with-samB
 npm install
 npm run dev
 ```

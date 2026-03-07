@@ -21,14 +21,16 @@ interface Props {
 export default function PlansItems({ plan, onEdit, onDelete, refetch }: Props) {
 	const [loading, setLoading] = useState(false)
 
-	const activeColors = useMemo(() => {
+	const statusStyles = useMemo(() => {
 		switch (plan.status) {
 			case 'un_started':
-				return 'text-blue-500'
+				return 'text-muted-foreground'
 			case 'in_progress':
-				return 'text-green-500'
+				return 'text-primary'
 			case 'paused':
-				return 'text-red-500'
+				return 'text-destructive'
+			default:
+				return 'text-muted-foreground'
 		}
 	}, [plan.status])
 
@@ -91,14 +93,14 @@ export default function PlansItems({ plan, onEdit, onDelete, refetch }: Props) {
 	}
 
 	return (
-		<Card className='w-full p-4 shadow-md grid grid-cols-4 items-center relative'>
+		<Card className='relative grid w-full grid-cols-4 items-center gap-3 rounded-lg border border-border bg-card p-4 shadow-sm'>
 			{loading && <Loader />}
 			<div className='flex gap-1 items-center col-span-2 '>
 				<ImCheckboxChecked />
 				<span className='capitalize'>{plan.title}</span>
 			</div>
 			<div className='flex gap-1 items-center '>
-				<MdOnlinePrediction className={activeColors} />
+				<MdOnlinePrediction className={statusStyles} />
 				<span>{plan.status}</span>
 			</div>
 			<div className='w-full flex gap-1 items-center justify-self-end'>

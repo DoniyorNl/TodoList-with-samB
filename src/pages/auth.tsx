@@ -8,8 +8,8 @@ export default function Auth() {
 	const { authState } = useAuthState()
 	return (
 		<>
-			<div className=' w-full h-screen flex items-center justify-center border-[5px]'>
-				<Card className='p-5 w-1/3 relative'>
+			<div className='flex min-h-screen w-full items-center justify-center bg-background p-4'>
+				<Card className='relative w-full max-w-md p-6 shadow-lg'>
 					{authState === 'login' && <Login />}
 					{authState === 'register' && <Register />}
 					<SocialMedia />

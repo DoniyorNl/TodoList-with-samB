@@ -14,8 +14,4 @@ export const iconS = [
 	TbBrandXFilled,
 ]
 
-export const navLinks = [
-	{ label: 'Home', path: '/home' },
-	// { label: 'Abou', path: '/about' },
-	// { label: 'Contact', path: '/contact' },
-]
+export const navLinks = [{ label: 'Home', path: '/home' }]

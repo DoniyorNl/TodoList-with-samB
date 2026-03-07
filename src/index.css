@@ -4,8 +4,8 @@
 
 @layer base {
 	:root {
-		/* ===== LIGHT MODE ===== */
-		--background: 210 20% 98%;
+		/* Light: cool neutral + single primary (blue) */
+		--background: 220 20% 98%;
 		--foreground: 222 25% 12%;
 
 		--card: 0 0% 100%;
@@ -14,61 +14,65 @@
 		--popover: 0 0% 100%;
 		--popover-foreground: 222 25% 12%;
 
-		/* Primary – calm blue */
-		--primary: 215 85% 55%;
+		--primary: 217 91% 50%;
 		--primary-foreground: 0 0% 100%;
 
-		/* Secondary – neutral gray */
 		--secondary: 220 14% 92%;
 		--secondary-foreground: 222 25% 18%;
 
 		--muted: 220 14% 94%;
-		--muted-foreground: 220 10% 45%;
+		--muted-foreground: 220 10% 48%;
 
-		--accent: 215 85% 55%;
-		--accent-foreground: 0 0% 100%;
+		--accent: 217 91% 96%;
+		--accent-foreground: 217 91% 40%;
 
 		--destructive: 0 72% 52%;
 		--destructive-foreground: 0 0% 100%;
 
-		--border: 220 14% 90%;
-		--input: 220 14% 90%;
-		--ring: 215 85% 55%;
+		--border: 220 14% 88%;
+		--input: 220 14% 88%;
+		--ring: 217 91% 50%;
 
 		--radius: 0.75rem;
+
+		/* Chart bars – same hue as primary */
+		--chart-1: 217 91% 50%;
+		--chart-2: 217 91% 70%;
+		--chart-3: 217 91% 85%;
 	}
 
 	.dark {
-		/* ===== DARK MODE ===== */
-		--background: 222 40% 6%;
-		--foreground: 210 30% 96%;
+		--background: 222 35% 7%;
+		--foreground: 210 25% 95%;
 
-		--card: 222 35% 9%;
-		--card-foreground: 210 30% 96%;
+		--card: 222 30% 10%;
+		--card-foreground: 210 25% 95%;
 
-		--popover: 222 35% 10%;
-		--popover-foreground: 210 30% 96%;
+		--popover: 222 30% 10%;
+		--popover-foreground: 210 25% 95%;
 
-		/* Primary – steel blue */
-		--primary: 220 90% 60%;
-		--primary-foreground: 200 40% 6%;
+		--primary: 217 91% 58%;
+		--primary-foreground: 222 35% 7%;
 
-		/* Secondary – dark slate */
-		--secondary: 222 20% 18%;
-		--secondary-foreground: 210 30% 96%;
+		--secondary: 222 25% 15%;
+		--secondary-foreground: 210 25% 95%;
 
-		--muted: 222 20% 16%;
-		--muted-foreground: 215 15% 65%;
+		--muted: 222 25% 14%;
+		--muted-foreground: 215 15% 62%;
 
-		--accent: 214 90% 60%;
-		--accent-foreground: 222 40% 6%;
+		--accent: 217 91% 20%;
+		--accent-foreground: 217 91% 75%;
 
-		--destructive: 0 65% 45%;
+		--destructive: 0 62% 45%;
 		--destructive-foreground: 0 0% 100%;
 
-		--border: 222 20% 18%;
-		--input: 222 20% 18%;
-		--ring: 214 90% 60%;
+		--border: 222 25% 16%;
+		--input: 222 25% 16%;
+		--ring: 217 91% 58%;
+
+		--chart-1: 217 91% 58%;
+		--chart-2: 217 91% 45%;
+		--chart-3: 217 70% 35%;
 	}
 
 	* {
@@ -76,31 +80,12 @@
 	}
 
 	body {
-		@apply bg-background text-foreground min-h-screen transition-colors;
-	}
-
-	.dark body {
-		@apply bg-background;
+		@apply bg-background text-foreground min-h-screen antialiased transition-colors;
 	}
 }
 
 @layer utilities {
-	/* Glow olib tashlandi – professional look */
-	.glow-teal,
-	.glow-emerald,
-	.glow-purple {
-		box-shadow: none;
-	}
-
-	.gradient-text {
-		@apply text-foreground;
-	}
-
-	.gradient-btn {
-		@apply bg-primary hover:bg-primary/90 transition-colors;
-	}
-
 	.card-hover {
-		@apply transition-colors;
+		@apply transition-colors duration-200;
 	}
 }

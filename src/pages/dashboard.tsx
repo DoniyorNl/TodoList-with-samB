@@ -156,7 +156,7 @@ export default function Dashboard() {
 			<div className='min-h-screen max-w-7xl mx-auto py-8 px-4 pt-[calc(10vh+2rem)]'>
 				<div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-8'>
 					{/* Left side - Planning section */}
-					<div className='flex flex-col rounded-xl space-y-3 border border-gray-700/30 bg-card/50 backdrop-blur-sm glow-purple'>
+					<div className='flex flex-col rounded-xl space-y-3 border border-border bg-card shadow-sm'>
 						<div className='w-full p-4 flex justify-between'>
 							<div className='text-2xl font-bold'>Planning</div>
 							<Button size='icon' onClick={() => setOpen(true)}>
@@ -207,21 +207,21 @@ export default function Dashboard() {
 						{/* Stats Cards - Compact Row */}
 						{data && (
 							<div className='grid grid-cols-3 gap-3'>
-								<div className='p-3 relative rounded-xl border border-slate-800/30 bg-gradient-to-br from-teal-500/10 to-cyan-600/10 backdrop-blur-sm card-hover glow-teal'>
-									<div className='text-sm font-semibold '>Total Time</div>
-									<div className='text-xl font-bold gradient-text'>
+								<div className='card-hover rounded-xl border border-border bg-card p-4 shadow-sm'>
+									<div className='text-sm font-medium text-muted-foreground'>Total Time</div>
+									<div className='text-xl font-bold text-foreground'>
 										{formatTime(liveTotals.total)}
 									</div>
 								</div>
-								<div className='p-3 relative rounded-xl border border-slate-800/30 bg-gradient-to-br from-cyan-500/10 to-teal-600/10 backdrop-blur-sm card-hover glow-emerald'>
-									<div className='text-sm font-semibold '>Total Week</div>
-									<div className='text-xl font-bold gradient-text'>
+								<div className='card-hover rounded-xl border border-border bg-card p-4 shadow-sm'>
+									<div className='text-sm font-medium text-muted-foreground'>Total Week</div>
+									<div className='text-xl font-bold text-foreground'>
 										{formatWeek(liveTotals.weekTotal)}
 									</div>
 								</div>
-								<div className='p-3 relative rounded-xl border border-slate-800/30 bg-gradient-to-br from-cyan-500/10 to-teal-600/10 backdrop-blur-sm card-hover glow-teal'>
-									<div className='text-sm font-semibold '>Total Month</div>
-									<div className='text-xl font-bold gradient-text'>
+								<div className='card-hover rounded-xl border border-border bg-card p-4 shadow-sm'>
+									<div className='text-sm font-medium text-muted-foreground'>Total Month</div>
+									<div className='text-xl font-bold text-foreground'>
 										{formatMonth(liveTotals.monthTotal)}
 									</div>
 								</div>
